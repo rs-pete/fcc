@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="survey form">
+    <meta name="keywords" content="form,survey">
+    <title>Survey Form for freecodecamp.org</title>
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800&display=swap');
+      body
+      {
+        min-height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        background-image:linear-gradient(160deg,#041872,#A0EACF);
+        background-size: auto;
+        color:white;
+        position: relative;
+      }
+      #title
+      {
+        text-align: center;
+        font-weight: 200;
+      }
+      #description
+      {
+        text-align: center;
+        font-weight: 100;
+      }
+      #survey-form
+      {
+        margin-left:25%;
+        text-transform: capitalize;
+      }
+      #firstthree
+      {
+        position: relative;
+        display: flex;
+        padding-top: 20px;
+      }
+      #box
+      {
+        position: relative;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 50%;
+      }
+      #age
+      {
+        position: relative;
+        margin-top: 10px;
+        padding-top:5px;
+        padding-bottom: 5px;
+        padding-right: 30px;
+      }
+      #downtext
+      {
+        display: flex;
+        margin-top: 20px;
+      }
+      #down
+      {
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 50%;
+      }
+      option
+      {
+        text-transform: capitalize;
+      }
+      #mcq
+      {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      #space
+      {
+        padding-left: 1px;
+        margin-left: 40px;
+      }
+      input
+      {
+        padding-left: 3px;
+        text-transform: capitalize;
+      }
+      #tick
+      {
+        padding-top:10px;
+        padding-bottom: 10px;
+      }
+      #tickop
+      {
+        margin-top: 10px;
+      }
+      #area
+      {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      textarea
+      {
+        width:79%;
+      }
+      #send
+      {
+        padding-top: 10px;
+        padding-bottom: 20px;
+
+      }
+      button
+      {
+        margin-left: 40%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius:10%;
+        border: 2px solid #0086cb;
+        color:#008;
+      }
+      button:hover
+      {
+        color:white;
+        background-color:#0086cb;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <header>
+    <h1 id="title">freecodecamp.org Survey Form</h1>
+    <p id="description" >Thank you for giving us the opportunity to be better</p>
+  </header>
+
+  <main>
+     <!-- surrvey starts here-->
+    <form id="survey-form">
+
+      <!-- each element in the survey is divided in divs to make it easiry to do css-->
+      <!--NAME-->
+      <div>
+        <label for="name" id="firstthree">name :</label>
+        <input
+          id="box"
+          type="text"
+          name="name"
+          placeholder="enter your name"
+          required
+        />
+      </div>
+
+      <!--EMAIL-->
+      <div>
+        <label for="email" id="firstthree">email :</label>
+        <input
+          id="box"
+          type="text"
+          name="email"
+          placeholder="enter your email"
+          required
+        />
+      </div>
+
+      <!--AGE-->
+      <div>
+        <label for="age" id="firstthree">age :</label>
+        <input
+          id="age"
+          type="number"
+          name="age"
+          placeholder="age"
+          min="12"
+          max="100"
+        />
+      </div>
+
+      <!--for the dropdown--->
+      <div>
+        <label id="downtext" for="dropdown">how did you get to know about freecodecamp</label>
+
+        <!--selections in th dropdown-->
+        <select id="down" name="dropdown" required>
+          <option disabled selected>Select Method</option><!-- this is the default option which cannot be selected-->
+          <option value="youtube">youtube</option>
+          <option value="twitter">twitter</option>
+          <option value="facebook">facebook</option>
+          <option value="instagram">instagram</option>
+          <option value="articleson">online articles</option>
+          <option value="articlesoff">offline articles</option>
+          <option value="friends">friends and family</option>
+        </select>
+        <!--end of selections-->
+      </div>
+      <!--end of dropdown-->
+
+      <!--radios start here-->
+      <div id="mcq">
+        <p>would recommend freecodecamp :</p>
+        <label id"space">
+          <input type="radio" name="options" value="definitely">
+          definitely
+        </label>
+        <label id="space">
+          <input type="radio" name="options" value="maybe">
+          maybe
+        </label>
+        <label id="space">
+          <input type="radio" name="options" value="never">
+          never
+        </label>
+      </div>
+      <!--end of radios-->
+
+      <!-- the checkboxes start here-->
+      <div id="tick">
+        <p>what woudl you link to get adde in freecodecamp</p>
+        <label>
+          <input type="checkbox" name="checkboxs" value="videos">
+          videos(to help us=nderstand better)
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="checkboxs" value="programming">
+          programming(c,java,c++,rubu etc.)
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="checkboxs" value="visuals">
+          visual design(photoshop,illustrator etc.)
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="checkboxs" value="linux">
+          more on linux(commmands,applications,sever management)
+        </label>
+      </div>
+      <!-- end of checkboxes-->
+
+      <!--comment box-->
+      <div id="area">
+        <p>please feel free to add anything more</p>
+        <!--area of the text box-->
+        <textarea
+          name="comments"
+          placeholder="enter your comments here"
+        ></textarea>
+        <!--textbox END-->
+      </div>
+
+      <!--submit button-->
+      <div id="send">
+        <button type="submit" name="submitbutton">Submit</button>
+      </div>
+
+    </form>
+    <!--form ended-->
+  </main>
+  </body>
+</html>
